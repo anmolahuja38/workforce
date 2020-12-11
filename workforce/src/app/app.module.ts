@@ -5,6 +5,7 @@ import { ListEmployeeComponent } from './components/list-employee/list-employee.
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgxPaginationModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

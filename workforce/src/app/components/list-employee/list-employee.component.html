@@ -1,5 +1,9 @@
+<br>
+<h3 style="text-align: right;">Total of {{employees.length}} employees</h3>
+<br>
 <div class="row">
-    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let employee of employees">
+    <div class="col-lg-4 col-md-6 mb-4"
+        *ngFor="let employee of employees | paginate: { itemsPerPage: 6, currentPage: p}">
         <div class="card h-100">
             <a><img class="card-img-top img-responsive" [src]="employee.avatar"></a>
             <div class="card-body">
@@ -9,4 +13,7 @@
             </div>
         </div>
     </div>
+</div>
+<div style="float:right;">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

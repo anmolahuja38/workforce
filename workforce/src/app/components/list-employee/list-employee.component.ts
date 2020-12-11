@@ -18,6 +18,7 @@ export class ListEmployeeComponent implements OnInit {
 
 
     employees: Employee[];
+    p: number = 1;
 
     getEmployeeList() {
         this._employeeServiceService.getListOfEmployees().subscribe(
