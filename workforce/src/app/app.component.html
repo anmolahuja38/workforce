@@ -1,30 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Workforce</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Employees
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Add Employee
-              </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Page Content -->
   <div class="container">
+    <a class="navbar-brand" routerLink="/employee">Workforce</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/employee" routerLinkActive="bg-primary text-white font-weight-bold">Employees 
+          </a>
+        </li>
 
-    <br><br><br>
-
- <router-outlet></router-outlet>
-
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addEmployee" routerLinkActive="bg-primary text-white font-weight-bold"> Add Employee
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+  <br><br><br>
+
+  <router-outlet></router-outlet>
+
+</div>

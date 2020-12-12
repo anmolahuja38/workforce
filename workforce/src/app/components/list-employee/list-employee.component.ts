@@ -21,10 +21,6 @@ export class ListEmployeeComponent implements OnInit {
     p: number = 1;
 
     getEmployeeList() {
-        this._employeeServiceService.getListOfEmployees().subscribe(
-            data => {
-                this.employees = data;
-            }
-        )
+        this.employees=this._employeeServiceService.getListOfEmployees();
     }
 }

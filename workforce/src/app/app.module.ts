@@ -4,12 +4,15 @@ import { AppComponent } from './app.component';
 import { ListEmployeeComponent } from './components/list-employee/list-employee.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { HttpClientModule } from '@angular/common/http';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EmployeeServiceService } from './services/employee-service.service';
 
 
 const routes: Routes = [
   { path: 'employee', component: ListEmployeeComponent },
+  { path: 'addEmployee', component: AddEmployeeComponent },
   { path: '', redirectTo: '/employee', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ]
@@ -18,15 +21,18 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ListEmployeeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     NgxPaginationModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    EmployeeServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
