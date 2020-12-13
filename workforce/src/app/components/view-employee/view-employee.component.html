@@ -1,0 +1,29 @@
+<br><br>
+<div class="row">
+  <div class="col-md">
+    <div class="card h-100">
+      <img [src]="employee.avatar" alt="" class="card-img-top img-responsive">
+    </div>
+  </div>
+  <div class="col-md">
+    <div class="card h-100" style="text-align: center;">
+      <h4 class="card-title">
+        <br>
+        <br>
+        Employee ID : {{employee.id}}
+        <br>
+        <br>
+        First Name : {{employee.first_name}}
+        <br>
+        <br>
+        Last Name : {{employee.last_name}}
+        <br>
+        <br>
+        Email Address : {{employee.email}}
+        <br><br>
+        <button type="button" class="btn btn-success">Update </button>
+        <button style="margin-left: 1%;" type="button" class="btn btn-danger" (click)="removeEmployee()">Remove</button>
+      </h4>
+    </div>
+  </div>
+</div>

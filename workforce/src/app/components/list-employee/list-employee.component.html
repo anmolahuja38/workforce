@@ -5,10 +5,10 @@
     <div class="col-lg-4 col-md-6 mb-4"
         *ngFor="let employee of employees | paginate: { itemsPerPage: 6, currentPage: p}">
         <div class="card h-100">
-            <a><img class="card-img-top img-responsive" [src]="employee.avatar"></a>
+            <a routerLink="/employee/{{employee.id}}"><img class="card-img-top img-responsive" [src]="employee.avatar"></a>
             <div class="card-body">
                 <h4 class="card-title">
-                    <a>{{employee.first_name}} {{employee.last_name}}</a>
+                    <a routerLink="/employee/{{employee.id}}">{{employee.first_name}} {{employee.last_name}}</a>
                 </h4>
             </div>
         </div>

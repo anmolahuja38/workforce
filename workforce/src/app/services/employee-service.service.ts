@@ -102,4 +102,13 @@ export class EmployeeServiceService {
      this.employees.push(employee);
      return this.employees;
   }
+
+  getEmployeeDetails(id : number) : Employee{
+    return this.employees.find(x => x.id=== id);
+  }
+
+  removeEmployee(id : number) : Employee[]{
+    this.employees.splice(this.employees.findIndex(emp => emp.id === id),1);
+    return this.employees;
+  }
 }

@@ -21,6 +21,6 @@ export class ListEmployeeComponent implements OnInit {
     p: number = 1;
 
     getEmployeeList() {
-        this.employees=this._employeeServiceService.getListOfEmployees();
+        this.employees=this._employeeServiceService.employees;
     }
 }

@@ -8,11 +8,16 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EmployeeServiceService } from './services/employee-service.service';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewEmployeeComponent } from './components/view-employee/view-employee.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 const routes: Routes = [
   { path: 'employee', component: ListEmployeeComponent },
   { path: 'addEmployee', component: AddEmployeeComponent },
+  { path: 'employee/:id', component: ViewEmployeeComponent },
   { path: '', redirectTo: '/employee', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ]
@@ -22,12 +27,16 @@ const routes: Routes = [
     AppComponent,
     ListEmployeeComponent,
     PageNotFoundComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    ViewEmployeeComponent
   ],
   imports: [
     BrowserModule,
     NgxPaginationModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    ToastrModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   providers: [
