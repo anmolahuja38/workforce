@@ -28,7 +28,7 @@ const routes: Routes = [
     ListEmployeeComponent,
     PageNotFoundComponent,
     AddEmployeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
   ],
   imports: [
     BrowserModule,
